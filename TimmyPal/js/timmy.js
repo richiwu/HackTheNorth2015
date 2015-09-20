@@ -3,7 +3,7 @@ var myApp = angular.module('timmy', []);
 myApp.controller('timmyController', ['$scope', function($scope){
 	$scope.tmp;
 	$scope.toggle = function() {
-		$scope.output = $scope.hourStayAwake*9.5 + $scope.weightNumber*0.1 + $scope.ageNumber*3 + $scope.hourSleep*6 + $scope.amountYears*13;
+		$scope.output = $scope.hourStayAwake*10.5 + $scope.weightNumber*0.05 + $scope.ageNumber*2 + $scope.hourSleep*6 + $scope.amountYears*10  + $scope.timeAwake*3;
 		$scope.output2 = "mg";
 		if (isNaN($scope.output)) {
 			$scope.output = "Enter Numbers!";
@@ -17,7 +17,7 @@ myApp.controller('timmyController', ['$scope', function($scope){
 
 	$scope.hashList = [
 		{
-			type: 'Original Blend Coffee - Small & Steeped Tea w/ Whole Leaf - Small',
+			type: 'Original Blend Coffee - Small',
 			number: '140'
 		},
 		{
@@ -72,13 +72,30 @@ myApp.controller('timmyController', ['$scope', function($scope){
 		},
 
 		{
-			type: 'Iced Cap - Medium',
+			type: 'Iced Cap - Medium', 
 			number: '120'
 		},
 
 		{
 			type: 'Iced Cap - Large',
 			number: '150'
+		},
+
+		{
+			type: 'Steeped Tea w/ Whole Leaf - Small',
+			number: '90'
+		},
+		{
+			type: 'Steeped Tea w/ Whole Leaf - Medium',
+			number: '125'
+		},
+		{
+			type: 'Steeped Tea w/ Whole Leaf - Large',
+			number: '175'
+		},
+		{
+			type: 'Steeped Tea w/ Whole Leaf - XLarge',
+			number: '210'
 		},
 
 	];
